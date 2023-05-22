@@ -1,6 +1,9 @@
-public class Vehicle {
+import OPP2HW.Serviceable;
+
+abstract class Vehicle implements Serviceable {
     private String modelName;
-    private  int wheelsCount;
+    private int wheelsCount;
+
 
     public Vehicle(String modelName, int wheelsCount) {
         this.modelName = modelName;
@@ -11,15 +14,18 @@ public class Vehicle {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+    public void updateTyres() {
+        System.out.print("    ");
+        System.out.print("Меняем покрышку №");
+        for (int i = 1; i <= getWheelsCount(); i++)
+            System.out.print(i + ",");
+        System.out.println();
+
     }
+
+
 }

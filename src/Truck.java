@@ -1,4 +1,6 @@
-public class Truck extends Vehicle {
+import OPP2HW.Serviceable;
+
+public class Truck extends Vehicle  {
 
 
 
@@ -7,12 +9,21 @@ public class Truck extends Vehicle {
 
     }
 
+    @Override
+    public void service() {
+        System.out.println("Обслуживаем " + getModelName());
+        updateTyres();
+        checkEngine();
+        checkTrailer();
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
     }
+    public void checkEngine() {
+        System.out.println("    Проверяем двигатель");
 
+
+    }
     public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
+        System.out.println("    Проверяем прицеп");
+
     }
 }

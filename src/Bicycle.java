@@ -1,3 +1,4 @@
+import OPP2HW.Serviceable;
 public class Bicycle  extends Vehicle {
 
 
@@ -7,6 +8,10 @@ public class Bicycle  extends Vehicle {
 
     }
 
-    public void updateTyre() {
+
+    @Override
+    public void service() {
+        System.out.println("Обслуживаем " + getModelName());
+            updateTyres();
     }
 }

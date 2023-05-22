@@ -1,5 +1,6 @@
-public class Car  extends Vehicle {
+import OPP2HW.Serviceable;
 
+public class Car extends Vehicle {
 
 
     public Car(String modelName, int wheelsCount) {
@@ -7,11 +8,17 @@ public class Car  extends Vehicle {
 
     }
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+   @Override
+    public void service() {
+       System.out.println("Обслуживаем " + getModelName());
+        updateTyres();
+        checkEngine();
+
     }
 
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("    Проверяем двигатель");
+
+
     }
 }
